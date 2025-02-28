@@ -291,7 +291,7 @@ def get_spyre_model_dir_path():
 # export SPYRE_TEST_BACKEND_LIST="eager, inductor, sendnn_decoder"
 def get_spyre_backend_list():
     test_backend_list = []
-    user_backend_list = os.environ.get("SPYRE_TEST_BACKEND_LIST", "eager")
+    user_backend_list = os.environ.get("SPYRE_TEST_BACKEND_LIST", "eager,inductor,sendnn_decoder,sendnn")
 
     for backend in user_backend_list.split(","):
         test_backend_list.append(backend.strip())
